@@ -97,7 +97,7 @@ function finishQuiz() {
 }
 
 function downloadCertificate(name, location, score) {
-    fetch(`/generate_certificate`, {
+    fetch(`https://lonely-lion-jumpsuit.cyclic.app/generate_certificate`, {
         method: 'POST',
         headers: {
             'Content-Type': 'application/json',
