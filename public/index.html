@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f1f1f1;
+            margin: 0;
+            padding: 0;
+        }
+
+        #quiz-container {
+            text-align: center;
+            padding: 20px;
+        }
+
+        #quiz-container h1 {
+            font-size: 24px;
+        }
+
+        label {
+            font-size: 16px;
+        }
+
+        input[type="text"] {
+            width: 100%;
+            padding: 10px;
+            margin: 5px 0;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+            box-sizing: border-box;
+        }
+
+        button {
+            background-color: #4CAF50;
+            color: white;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+        }
+
+        #quiz-questions {
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+        }
+
+        #certificate {
+            display: none;
+            text-align: center;
+            background-color: #fff;
+            padding: 20px;
+        }
+
+        h2 {
+            font-size: 20px;
+        }
+
+        img {
+            max-width: 100%;
+            height: auto;
+        }
+
+        button#download-certificate {
+            background-color: #4CAF50;
+            color: white;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+            text-decoration: none;
+            display: inline-block;
+        }
+    </style>
+</head>
+<body>
+    <div id="quiz-container">
+        <h1>Welcome to the General Knowledge Quiz</h1>
+        <label for="name">Your Name:</label>
+        <input type="text" id="name" placeholder="Enter your name" required>
+        <label for="location">Your Location:</label>
+        <input type="text" id="location" placeholder="Enter your location" required>
+        <button id="start-quiz">Start Quiz</button>
+    </div>
+
+    <div id="quiz-questions" style="display: none;">
+        <!-- Quiz questions will be loaded here using JavaScript -->
+    </div>
+
+    <div id="certificate" style="display: none;">
+        <h2>Certificate of Achievement</h2>
+        <img style="width: 5rem; height: 2rem;" src="images/sun-removebg-preview.png" alt="Organization Logo">
+        <p>Location: <span id="certificate-location"></span></p>
+        <p>Name: <span id="certificate-name"></span></p>
+        <p>Total Score: <span id="certificate-score"></span></p>
+        <p>Organization Name: Sijgeria Umesh Chandra Smriti Sangha</p>
+        <p>Secretary Signature: <img style="width: 5rem; height: 2rem;" src="images/MYSIGN-hadbomb.com (1).jpeg" alt="Secretary Signature"></p>
+        <button id="download-certificate" href="#" download>Download Certificate</button>
+    </div>
+
+    <script src="quiz.js"></script>
+</body>
+</html>
