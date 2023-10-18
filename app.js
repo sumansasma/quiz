@@ -8,7 +8,7 @@ app.use(express.urlencoded({ extended: true }));
 
 app.use(express.static('public'));
 
-app.post('/generate_certificate', async (req, res) => {
+app.post('https://lonely-lion-jumpsuit.cyclic.app/generate_certificate', async (req, res) => {
     const { name, location, score } = req.body;
 
     const browser = await puppeteer.launch({ headless: "new" });
